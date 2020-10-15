@@ -2,30 +2,43 @@
 
 Repo Owner: Robert Dermarkar
 
-This Repo is for UofT ECE444 Lab3 for learning Flask
+This Branch is for UofT ECE444 Lab4 for learning Docker
 
 This repo is a clone of https://github.com/miguelgrinberg/flasky
 
 Activity 1:
 
-![Screenshot 1](/images/ECE344_Lab3_Part1_Screenshot.jpg)
+I have read these pieces of documentation
 
 Activity 2:
 
-![Screenshot 2](/images/ECE344_Lab3_Part2_Screenshot1.jpg)
+To run this image first ensure that Docker in properly installed on your computer. 
 
-![Screenshot 3](/images/ECE344_Lab3_Part2_Screenshot2.jpg)
+1) Open Command Prompt/Powershell/Terminal in root folder ("\ECE444-F2020-Lab3")
 
-![Screenshot 4](/images/ECE344_Lab3_Part2_Screenshot3.jpg)
+2) Run Command "docker build -t ece444-f2020-lab3_web:latest .". This should build the image.
 
-![Screenshot 5](/images/ECE344_Lab3_Part2_Screenshot4.jpg)
+3) Run Command "docker run -d -p 5000:5000 ece444-f2020-lab3_web". 
 
-Activity 3: Briefly summarize the difference between SQL or NoSQL database.
+4) You should now be able to go the website with URL "http://localhost:5000/"
 
-SQL Database - Relation database which stores data in tables with fixed number of columns each of which represent a type of data (e.g. name, date, mark, etc). The tables connect to each other through relationships where columns have foreign keys which reference the primary keys of rows in other tables. SQL databases are compact but very rigid in their consistency rules
+![Screenshot 2](/images/ECE344_Lab4_Part2_Screenshot1.jpg)
 
-NoSQL Database - They do not support relationships the way SQL databases do, resulting the the application needing to do the searching for related data. They tend to reduce to number of tables storing data which results in more data redundency. This redundency means that where in an SQL database only one piece of data may need to be changed in NoSQL is may be an expensive operation involving many changes. It also means that searching can be faster as the data exists in more places.
+![Screenshot 3](/images/ECE344_Lab4_Part2_Screenshot2.jpg)
+
 
 Activity 3:
-Virtual Machines (VMs) have the following hierarchy Host OS -> Hypervisor -> Guest OS -> Bins/Libs -> App whereas Docker Containers have the following hierarchy Host OS - Docker Engine -> Bins/Libs -> App.
+
+Virtual Machines (VMs) are used to emulate hardware and an Operating System (OS) on a device which does not have those specification or enabaling the complete isolation of processes from one another.
+
+Docker on the other hand generally use the host's OS and libraries with some alterations to ensure the correct environment. 
+
+VMS have the following hierarchy Host OS -> Hypervisor -> Guest OS -> Bins/Libs -> App 
+
+whereas Docker Containers have the following hierarchy Host OS -> Docker Engine -> Bins/Libs -> App.
+
 The need for VMs to have their own OSs means that they have a much higher overhead.
+
+Docker Containers can also be shared easily due to their small size with the image being constructed locally . 
+
+VMs on the other hand need the entire image to shared which can be several GB versus KBs for Docker.
