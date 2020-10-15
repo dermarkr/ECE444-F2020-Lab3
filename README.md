@@ -25,3 +25,7 @@ Activity 3: Briefly summarize the difference between SQL or NoSQL database.
 SQL Database - Relation database which stores data in tables with fixed number of columns each of which represent a type of data (e.g. name, date, mark, etc). The tables connect to each other through relationships where columns have foreign keys which reference the primary keys of rows in other tables. SQL databases are compact but very rigid in their consistency rules
 
 NoSQL Database - They do not support relationships the way SQL databases do, resulting the the application needing to do the searching for related data. They tend to reduce to number of tables storing data which results in more data redundency. This redundency means that where in an SQL database only one piece of data may need to be changed in NoSQL is may be an expensive operation involving many changes. It also means that searching can be faster as the data exists in more places.
+
+Activity 3:
+Virtual Machines (VMs) have the following hierarchy Host OS -> Hypervisor -> Guest OS -> Bins/Libs -> App whereas Docker Containers have the following hierarchy Host OS - Docker Engine -> Bins/Libs -> App.
+The need for VMs to have their own OSs means that they have a much higher overhead.
